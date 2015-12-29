@@ -10,6 +10,7 @@ import android.widget.AbsListView;
 import android.widget.ScrollView;
 
 import cn.bingoogolapple.refreshlayout.BGAStickyNavLayout;
+import cn.bingoogolapple.refreshlayout.widget.ScrollYLinearLayoutManager;
 
 /**
  * 作者:王浩 邮件:bingoogolapple@gmail.com
@@ -46,8 +47,11 @@ public class ScrollingUtil {
                 // 如果RecyclerView的子控件数量不为0，获取第一个子控件的top
 
                 // 解决item的topMargin不为0时不能触发下拉刷新
-                ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) recyclerView.getChildAt(0).getLayoutParams();
-                firstChildTop = recyclerView.getChildAt(0).getTop() - layoutParams.topMargin - recyclerView.getPaddingTop();
+//                ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) recyclerView.getChildAt(0).getLayoutParams();
+//                firstChildTop = recyclerView.getChildAt(0).getTop() - layoutParams.topMargin - recyclerView.getPaddingTop();
+                //滚动距离既为第一个距离
+                ScrollYLinearLayoutManager linearLayoutManager = (ScrollYLinearLayoutManager)recyclerView.getLayoutManager();
+                firstChildTop = linearLayoutManager.getScrollY();
             }
 
             RecyclerView.LayoutManager manager = recyclerView.getLayoutManager();
