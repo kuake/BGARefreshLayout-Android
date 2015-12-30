@@ -1,27 +1,27 @@
 package cn.bingoogolapple.refreshlayout.widget;
 
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Created by zl on 15/12/29.
+ * Created by zl on 15/12/30.
  */
-public class ScrollYLinearLayoutManager extends LinearLayoutManager{
+public class GridScrollYLinearLayoutManager extends GridLayoutManager{
     private RecyclerView.Recycler mRecycler;
 
-    public ScrollYLinearLayoutManager(Context context){
-        super(context);
-    }
-
-    public ScrollYLinearLayoutManager(Context context, int orientation, boolean reverseLayout){
-        super(context, orientation, reverseLayout);
-    }
-
-    public ScrollYLinearLayoutManager(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes){
+    public GridScrollYLinearLayoutManager(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes){
         super(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+    public GridScrollYLinearLayoutManager(Context context, int spanCount){
+        super(context, spanCount);
+    }
+
+    public GridScrollYLinearLayoutManager(Context context, int spanCount, int orientation, boolean reverseLayout){
+        super(context, spanCount, orientation, reverseLayout);
     }
 
     @Override

@@ -4,13 +4,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.AbsListView;
 import android.widget.ScrollView;
 
 import cn.bingoogolapple.refreshlayout.BGAStickyNavLayout;
-import cn.bingoogolapple.refreshlayout.widget.ScrollYLinearLayoutManager;
+import cn.bingoogolapple.refreshlayout.widget.GridScrollYLinearLayoutManager;
 
 /**
  * 作者:王浩 邮件:bingoogolapple@gmail.com
@@ -50,7 +49,7 @@ public class ScrollingUtil {
 //                ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) recyclerView.getChildAt(0).getLayoutParams();
 //                firstChildTop = recyclerView.getChildAt(0).getTop() - layoutParams.topMargin - recyclerView.getPaddingTop();
                 //滚动距离既为第一个距离
-                ScrollYLinearLayoutManager linearLayoutManager = (ScrollYLinearLayoutManager)recyclerView.getLayoutManager();
+                GridScrollYLinearLayoutManager linearLayoutManager = (GridScrollYLinearLayoutManager)recyclerView.getLayoutManager();
                 firstChildTop = linearLayoutManager.getScrollY();
             }
 

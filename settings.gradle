@@ -1,1 +1,1 @@
-include ':library', ':demo'
+include ':bga-refreshlayout', ':demo'

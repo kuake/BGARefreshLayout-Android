@@ -41,3 +41,9 @@ proguard/
 .DS_Store
 
 *.keystore
+
+build.gradle
+demo/build.gradle
+gradle.properties
+library/build.gradle
+library/gradle.properties
